@@ -6,7 +6,7 @@
 Every developer is familiar with http api and this demo quickly illustrates how we can create a classic client-server application using http api.
 
 
-### Device1
+### Device1 Application
 
 ##### 1. Create a device1 project directory and install m2m.
 ```js
@@ -43,7 +43,7 @@ device.connect(() => {
 ```js
 $ node device.js
 ```
-### Device2
+### Device2 Application
 
 ##### 1. Create a device2 project directory and install m2m.
 ```js
@@ -116,7 +116,7 @@ client.connect(() => {
 });
 ```
 
-##### 3. Start your application.
+##### 3. Start your client application.
 ```js
 $ node client.js
 ```
