@@ -8,11 +8,11 @@ Every developer is familiar with http api and this demo quickly illustrates how 
 
 ### Device1 Application
 
-##### 1. Create a device1 project directory and install m2m.
+#### 1. Create a device1 project directory and install m2m.
 ```js
 $ npm install m2m
 ```
-##### 2. Save the code below as device.js in your device1 project directory.
+#### 2. Save the code below as device.js in your device1 project directory.
 
 ```js
 const { Device } = require('m2m');
@@ -39,17 +39,17 @@ device.connect(() => {
 
 });
 ```
-##### 3. Start your device1 application.
+#### 3. Start your device1 application.
 ```js
 $ node device.js
 ```
 ### Device2 Application
 
-##### 1. Create a device2 project directory and install m2m.
+#### 1. Create a device2 project directory and install m2m.
 ```js
 $ npm install m2m
 ```
-##### 2. Save the code below as device.js in your device2 project directory.
+#### 2. Save the code below as device.js in your device2 project directory.
 
 ```js
 const { Device } = require('m2m');
@@ -75,20 +75,20 @@ device.connect(() => {
 
 });
 ```
-##### 3. Start your device2 application.
+#### 3. Start your device2 application.
 ```js
 $ node device.js
 ```
 
 ### Client Application
 
-##### 1. Create a client project directory and install m2m.
+#### 1. Create a client project directory and install m2m.
 
 ```js
 $ npm install m2m
 ```
 
-##### 2. Save the code below as client.js within your client project directory.
+#### 2. Save the code below as client.js within your client project directory.
 
 ```js
 const m2m = require('m2m');
@@ -116,7 +116,7 @@ client.connect(() => {
 });
 ```
 
-##### 3. Start your client application.
+#### 3. Start your client application.
 ```js
 $ node client.js
 ```
