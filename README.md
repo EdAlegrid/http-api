@@ -19,26 +19,18 @@ const { Device } = require('m2m');
 
 let device = new Device(100);
 
-let myData = 'myData';
+device.connect(() => {
 
-device.connect('https://dev.node-m2m.com', () => {
-
-  device.setGpio({mode:'input', pin:[11, 13]});
-  device.setGpio({mode:'output', pin:[33, 35]});
-
-  device.setData('get-data', (data) => {
-    data.send(myData);
+  device.get('/device/state', (req, res) => {
+    res.send('off');
   });
 
-  device.setData('send-data', (data) => {
-    if(data.payload){
-      myData = data.payload;
-      data.send(data.payload);
-    }
+  device.post('/machine-control/:id/actuator/:number/action/:state', (req, res) => {
+    console.log('req.body', req.body);
+    let body = JSON.stringify(req.body);
+    res.send({id:req.params.id, num:req.params.number, state:req.params.state, body:body});
   });
 
-  // error listener
-  device.on('error', (err) => console.log('error:', err))
 });
 ```
 ##### 3. Start your device1 application.
@@ -58,14 +50,22 @@ const { Device } = require('m2m');
 
 const device = new Device(200);
 
-device.connect('https://dev.node-m2m.com', () => {
-  device.setGpio({mode:'out', pin:[33, 35]}, gpio => console.log(gpio.pin, gpio.state));
-  
-  device.setData('random-number', (data) => {
-    let r = Math.floor(Math.random() * 100) + 25;
-    data.send(r);
-    console.log('random', r);
+device.connect(() => {
+
+  device.get('/device/state/status', (req, res) => {
+    res.send('on');
   });
+
+  device.post('/update-data', (req, res) => {
+    console.log('req.body', req.body);
+    res.send({path:'/update-data'});
+  });
+
+  device.post('/machine-control/:id/actuator/:number/action/:state', (req, res) => {
+    console.log('req.body', req.body);
+    res.send({id:req.params.id, num:req.params.number, state:req.params.state});
+  });
+
 });
 ```
 ##### 3. Start your device2 application.
@@ -90,24 +90,20 @@ let client = new m2m.Client();
 
 client.connect(() => {
 
-  // capture 'random-number' data using a pull method
-  client.getData({id:100, channel:'random-number'}, (data) => {
-    console.log('getData random-number', data); // 97
+  client.get({id:100, path:'/device/state'}, (data) => {
+    console.log('device 100 state', data); 
   });
 
-  // capture 'random-number' data using a push method
-  client.watchData({id:100, channel:'random-number'}, (data) => {
-    console.log('watch random-number', data); // 81, 68, 115 ...
+  client.get({id:200, path:'/device/state/status'}, (data) => {
+    console.log('device 200 state', data); 
   });
 
-  // update test-data
-  client.sendData({id:100, channel:'test-data', payload:'node-m2m is awesome'}, (data) => {
-    console.log('sendData test-data', data);
+  client.post({id:100, path:'/update-data', body:{name:'Jim', age:'30'}}, (data) => {
+    console.log('device 100 post /update-data result', data); 
   });
 
-  // capture updated test-data
-  client.getData({id:100, channel:'test-data'}, (data) => {
-    console.log('getData test-data', data); // node-m2m is awesome
+  client.post({id:200, path:'/machine-control/m120/actuator/25/action/on', body:{id:200, state:'true'}}, (data) => {
+    console.log('machine ' +data.id +' actuator '+data.num +' is ' +data.state);  
   });
 
 });
