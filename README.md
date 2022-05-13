@@ -3,7 +3,7 @@
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
-Every developer is familiar with http api and this demo quickly illustrates how we can create a classic client-server application using http.
+Every developer is familiar with http api and this demo quickly illustrates how we can create a classic client-server application using http api.
 
 
 ### Device1
