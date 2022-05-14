@@ -6,9 +6,9 @@
 
 Every developer is familiar with http api and this demo quickly illustrates how we can create a classic client-server application using http api.
 
-Set your http resources as defined by the different **paths** along with the **get** and **post** methods. 
+Set your http resources as defined by the different *paths* along with the *get* and *post* methods. 
 
-You can customize your resources by defining your paths or routes with query strings and route parameters both in **get** and **post** methods. 
+You can customize your resources by defining your *paths* or routes with query strings and route parameters both in *get* and *post* methods. 
 
 ### Device1 Application
 
