@@ -1,7 +1,6 @@
 # Client-Server Application Using HTTP Api
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
-## Client-Server Application Using HTTP Api
 
 Every developer is familiar with http api and this demo quickly illustrates how we can create a classic client-server application using http api.
 
