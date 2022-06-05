@@ -1,5 +1,4 @@
-# Client-server application using http api
-
+# Client-Server Application Using HTTP Api
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 ## Client-Server Application Using HTTP Api
