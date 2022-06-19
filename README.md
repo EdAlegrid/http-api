@@ -127,4 +127,15 @@ client.connect(() => {
 $ node client.js
 ```
 
+You should get a result as shown below.
+```js
+device 100 post /update-data result device 100 data updated
+device 200 device/state result { id: 100, state: 'off' }
+device 100 get /update-data result { name: 'ed', status: 'member' }
+device 200 /machine-control result {
+  params: { id: 'm120', number: '25', state: 'on' },
+  body: { id: 200, state: 'true' }
+}
+```
+
 
