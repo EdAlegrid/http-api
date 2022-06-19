@@ -8,6 +8,8 @@ Set your http resources as defined by the different *paths* along with the *get*
 
 You can customize your resources by defining your *paths* or *routes* with *query strings* and *route parameters* both in *get* and *post* methods. 
 
+<br>
+
 ### Device1 Setup
 
 #### 1. Create a device1 project directory and install m2m.
@@ -80,6 +82,7 @@ device.connect(() => {
 ```js
 $ node device.js
 ```
+<br>
 
 ### Client Setup
 
