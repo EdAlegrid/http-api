@@ -16,7 +16,7 @@ You can customize your resources by defining your *paths* or *routes* with *quer
 ```js
 $ npm install m2m
 ```
-#### 2. Save the code below as device.js in your device1 project directory.
+#### 2. Save the code below as *device.js* in your project directory.
 ```js
 const { Device } = require('m2m');
 
@@ -46,13 +46,15 @@ device.connect(() => {
 ```js
 $ node device.js
 ```
+<br>
+
 ### Device2 Setup
 
 #### 1. Create a device2 project directory and install m2m.
 ```js
 $ npm install m2m
 ```
-#### 2. Save the code below as device.js in your device2 project directory.
+#### 2. Save the code below as device.js in your project directory.
 
 ```js
 const { Device } = require('m2m');
@@ -124,3 +126,5 @@ client.connect(() => {
 ```js
 $ node client.js
 ```
+
+
