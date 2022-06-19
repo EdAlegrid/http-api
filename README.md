@@ -2,11 +2,11 @@
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
-Every developer is familiar with http api and this demo quickly illustrates how we can create a classic client-server application using http api.
+Every developer is familiar with http api and this tutorial quickly demonstrates how we can create a classic client-server application using node-m2m.
 
 Set your http resources as defined by the different *paths* along with the *get* and *post* methods. 
 
-You can customize your resources by defining your *paths* or routes with query strings and route parameters both in *get* and *post* methods. 
+You can customize your resources by defining your *paths* or *routes* with *query strings* and *route parameters* both in *get* and *post* methods. 
 
 ### Device1 Application
 
