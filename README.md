@@ -2,7 +2,7 @@
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
-Every developer is familiar with http api and this tutorial quickly demonstrates how we can create a classic client-server application using **node-m2m**.
+Every developer is familiar with http api and this demo quickly shows how we can create a classic client-server application using **node-m2m**.
 
 Set your http resources as defined by the different *paths* along with the *get* and *post* methods. 
 
