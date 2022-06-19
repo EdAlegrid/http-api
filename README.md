@@ -129,6 +129,7 @@ $ node client.js
 
 You should get a result as shown below.
 ```js
+...
 device 100 post /update-data result device 100 data updated
 device 200 device/state result { id: 100, state: 'off' }
 device 100 get /update-data result { name: 'ed', status: 'member' }
