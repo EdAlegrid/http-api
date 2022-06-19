@@ -54,7 +54,7 @@ $ node device.js
 ```js
 $ npm install m2m
 ```
-#### 2. Save the code below as device.js in your project directory.
+#### 2. Save the code below as *device.js* in your project directory.
 
 ```js
 const { Device } = require('m2m');
@@ -94,7 +94,7 @@ $ node device.js
 $ npm install m2m
 ```
 
-#### 2. Save the code below as client.js within your client project directory.
+#### 2. Save the code below as *client.js* within your client project directory.
 
 ```js
 const m2m = require('m2m');
